@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Enem</string>
+
+    <string-array name="eth_arrays">
+        <item>Asian</item>
+        <item>Caucasian</item>
+        <item>African</item>
+        <item>Middle-Eastern</item>
+        <item>Hispanic</item>
+    </string-array>
+
+    <string-array name="gender_arrays">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="aer">Sex</string>
+    <string name="er">Ethnicity</string>
+</resources>
