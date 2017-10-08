@@ -205,6 +205,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
                         final double powerLeft = ((left/0.0782) - 5)/10;
                         final double powerRight = ((right/0.0782) - 5)/10;
+                        System.out.println("How can you be twenty-four?");
 
                         runOnUiThread(new Runnable()
                         {
