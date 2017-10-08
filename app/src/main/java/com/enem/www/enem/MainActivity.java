@@ -155,41 +155,31 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                         for (AnnotateImageResponse res : responses)
                         {
                             // For full list of available annotations, see http://g.co/cloud/vision/docs
-                            for (FaceAnnotation annotation : res.getFaceAnnotations())
+                            if(res.getFaceAnnotations() != null)
                             {
-                                for(Landmark lm : annotation.getLandmarks())
+                                for (FaceAnnotation annotation : res.getFaceAnnotations())
                                 {
-                                    if(lm.getType() != null && lm.getType().equals("LEFT_EYE_LEFT_CORNER"))
+                                    for (Landmark lm : annotation.getLandmarks())
                                     {
-                                        a = lm.getPosition().getX();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("LEFT_EYE_RIGHT_CORNER"))
-                                    {
-                                        b = lm.getPosition().getX();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("LEFT_EYE_TOP_BOUNDARY"))
-                                    {
-                                        e = lm.getPosition().getY();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("LEFT_EYE_BOTTOM_BONDARY"))
-                                    {
-                                        f = lm.getPosition().getY();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("RIGHT_EYE_LEFT_CORNER"))
-                                    {
-                                        x = lm.getPosition().getX();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("RIGHT_EYE_RIGHT_CORNER"))
-                                    {
-                                        y = lm.getPosition().getX();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("RIGHT_EYE_TOP_BOUNDARY"))
-                                    {
-                                        z = lm.getPosition().getY();
-                                    }
-                                    else if(lm.getType() != null && lm.getType().equals("RIGHT_EYE_BOTTOM_BONDARY"))
-                                    {
-                                        w = lm.getPosition().getY();
+                                        if (lm.getType() != null && lm.getType().equals("LEFT_EYE_LEFT_CORNER"))
+                                        {
+                                            a = lm.getPosition().getX();
+                                        } else if (lm.getType() != null && lm.getType().equals("LEFT_EYE_RIGHT_CORNER"))
+                                        {
+                                            b = lm.getPosition().getX();
+                                        } else if (lm.getType() != null && lm.getType().equals("LEFT_EYE_TOP_BOUNDARY")) {
+                                            e = lm.getPosition().getY();
+                                        } else if (lm.getType() != null && lm.getType().equals("LEFT_EYE_BOTTOM_BONDARY")) {
+                                            f = lm.getPosition().getY();
+                                        } else if (lm.getType() != null && lm.getType().equals("RIGHT_EYE_LEFT_CORNER")) {
+                                            x = lm.getPosition().getX();
+                                        } else if (lm.getType() != null && lm.getType().equals("RIGHT_EYE_RIGHT_CORNER")) {
+                                            y = lm.getPosition().getX();
+                                        } else if (lm.getType() != null && lm.getType().equals("RIGHT_EYE_TOP_BOUNDARY")) {
+                                            z = lm.getPosition().getY();
+                                        } else if (lm.getType() != null && lm.getType().equals("RIGHT_EYE_BOTTOM_BONDARY")) {
+                                            w = lm.getPosition().getY();
+                                        }
                                     }
                                 }
                             }
